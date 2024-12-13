@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="NDOPosDemo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NDOPosDemo"
+    xmlns:pages="clr-namespace:NDOPosDemo.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="NDOPosDemo">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate pages:MainPage}"
+        Route="MainPage" />
+    
+    <ShellContent
+     Title="Menu"
+     ContentTemplate="{DataTemplate pages:ManageMenuItem}"
+     Route="ManageMenuItem" />
+
+    <ShellContent
+     Title="Orders"
+     ContentTemplate="{DataTemplate pages:Orders}"
+     Route="Orders" />
+
+</Shell>
