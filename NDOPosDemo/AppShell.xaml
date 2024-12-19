@@ -5,22 +5,37 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:NDOPosDemo"
     xmlns:pages="clr-namespace:NDOPosDemo.Pages"
-    Shell.FlyoutBehavior="Disabled"
-    Title="NDOPosDemo">
+    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBackgroundColor="DarkOliveGreen"
+    Shell.FlyoutWidth="60"
+    Title="POS Demo">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate pages:MainPage}"
+        Icon="home.png"
         Route="MainPage" />
     
     <ShellContent
-     Title="Menu"
-     ContentTemplate="{DataTemplate pages:ManageMenuItem}"
-     Route="ManageMenuItem" />
+         Title="Menu"
+         ContentTemplate="{DataTemplate pages:ManageMenuItem}"
+         Icon="folder.png"
+         Route="ManageMenuItem" />
 
     <ShellContent
-     Title="Orders"
-     ContentTemplate="{DataTemplate pages:Orders}"
-     Route="Orders" />
+        Title="Orders"
+        ContentTemplate="{DataTemplate pages:Orders}"
+        Icon="shoppingcart_purple.png"
+        Route="Orders" />
+
+    <Shell.FlyoutFooter>
+        <Image 
+            Margin="0,0,0,30"
+            Source="smartphone.png" 
+            Aspect="AspectFit"
+            HorizontalOptions="Center"
+            HeightRequest="35"
+            WidthRequest="35"/>
+    </Shell.FlyoutFooter>
 
 </Shell>
